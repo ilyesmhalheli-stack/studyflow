@@ -1,6 +1,4 @@
-// JavaScript pour la page contact.html
 
-// Variables pour la galerie d'images
 const images = [
     'https://images.unsplash.com/photo-1513258496099-48168024aec0',
     'https://images.unsplash.com/photo-1503676260728-1c00da094a0b',

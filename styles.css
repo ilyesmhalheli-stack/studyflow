@@ -1,10 +1,17 @@
-/* Styles simples et minimalistes */
+/* ============================================================
+   StudyFlow - Styles CSS
+   Auteurs: Med Aziz Gaddour, Mhalheli Ilyes
+   ENSI 2025/2026
+   ============================================================ */
+
+/* ── Reset ─────────────────────────────────────────────────── */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ── Body ──────────────────────────────────────────────────── */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -12,14 +19,14 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Navigation */
+/* ── Header ────────────────────────────────────────────────── */
 header {
     background: #0056b3;
     color: white;
-    padding: 1rem 0;    
+    padding: 1rem 0;
 }
 
-
+/* ── Nav ───────────────────────────────────────────────────── */
 nav {
     max-width: 1200px;
     margin: 0 auto;
@@ -31,12 +38,14 @@ nav {
 
 nav h1 {
     font-size: 1.5rem;
+    color: white;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -48,87 +57,74 @@ nav a {
 }
 
 nav a:hover, nav a.active {
-    background-color: #0056b3;
+    background-color: rgba(255,255,255,0.2);
 }
 
-/* Bannière animée*/
-.animated-banner {
+/* ── Footer ────────────────────────────────────────────────── */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.btn-logout {
+    color: white;
+    background: #dc3545;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.btn-login-footer {
+    color: white;
+    text-decoration: none;
+}
+
+/* ── Boutons ───────────────────────────────────────────────── */
+.btn {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0.3rem;
+}
+
+.btn:hover {
+    background: #218838;
+}
+
+.btn-secondary {
+    background: #6c757d;
+}
+
+.btn-secondary:hover {
+    background: #545b62;
+}
+
+/* ── Page headers ──────────────────────────────────────────── */
+.page-header,
+.funpage-header,
+.questionnaire-header,
+.about-header,
+.planning-header,
+.tasks-header,
+.dashboard-page-header {
     background: linear-gradient(45deg, #0056b3, #003d82);
     color: white;
-    padding: 1.5rem;
     text-align: center;
-    overflow: hidden;
+    padding: 2rem 0;
 }
 
-.banner-content {
-    font-size: 1.2rem;
-    font-weight: bold;
-    white-space: nowrap;
-    animation: fadeIn 4s ease-in-out;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-} 
-
-/* Galerie d'images */
-.image-gallery {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.gallery-container {
-    position: relative;
-    display: inline-block;
-    margin: 1rem 0;
-}
-
-.gallery-container img {
-    width: 600px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-}
-
-.gallery-container img:hover {
-    transform: scale(1.05);
-}
-
-.gallery-controls {
-    display: flex;
-    justify-content: center; /* centrer les boutons */
-    gap: 1rem; /* espace entre les boutons */
-    margin-top: 1rem;
-}
-
-.gallery-btn {
-    background-color: #28a745; /* vert moderne */
-    color: white;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    font-size: 1.2rem;
-    border-radius: 8px; /* coins arrondis */
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-
-.gallery-btn:hover {
-    background-color: #218838; /* vert foncé au survol */
-    transform: translateY(-2px); /* petit effet flottant */
-    box-shadow: 0 6px 8px rgba(0,0,0,0.3);
-}
-
-.gallery-btn:active {
-    transform: translateY(1px);
-    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
-}
-
+/* ── Hero (index.php) ──────────────────────────────────────── */
 .hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
@@ -149,26 +145,11 @@ nav a:hover, nav a.active {
     margin-right: auto;
 }
 
-.btn {
-    display: inline-block;
-    background: #28a745;
-    color: white;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background: #218838;
-}
-
+/* ── Features (index.php) ──────────────────────────────────── */
 .features {
-    padding: 4rem 0;
+    padding: 4rem 20px;
     max-width: 1200px;
     margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 .features h3 {
@@ -202,13 +183,7 @@ nav a:hover, nav a.active {
     color: #666;
 }
 
-.dashboard-header {
-    background: #0056b3;
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-}
-
+/* ── Dashboard ─────────────────────────────────────────────── */
 .dashboard-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -217,7 +192,7 @@ nav a:hover, nav a.active {
 
 .dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
 }
@@ -232,57 +207,16 @@ nav a:hover, nav a.active {
 .dashboard-card h3 {
     color: #007bff;
     margin-bottom: 1rem;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 0.5rem;
 }
 
-.page-header {
-    background: #0056b3;
-    color: white;
+.dashboard-actions {
     text-align: center;
-    padding: 2rem 0;
+    margin-top: 2rem;
 }
 
-.funpage-header {
-    background: linear-gradient(45deg, #0056b3, #003d82);
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-}
-
-.questionnaire-header {
-    background: linear-gradient(45deg, #0056b3, #003d82);
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-}
-
-.about-header {
-    background: linear-gradient(45deg, #0056b3, #003d82);
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-}
-
-.planning-header {
-    background: linear-gradient(45deg, #0056b3, #003d82);
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-}
-
-.tasks-header {
-    background: linear-gradient(45deg, #0056b3, #003d82);
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-}
-
-.dashboard-page-header {
-    background: linear-gradient(45deg, #0056b3, #003d82);
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-}
-
+/* ── Tasks ─────────────────────────────────────────────────── */
 .tasks-layout {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -292,7 +226,8 @@ nav a:hover, nav a.active {
     padding: 2rem 20px;
 }
 
-.form-section, .tasks-list-section {
+.form-section,
+.tasks-list-section {
     background: white;
     padding: 2rem;
     border-radius: 8px;
@@ -305,6 +240,7 @@ nav a:hover, nav a.active {
     gap: 1rem;
 }
 
+/* ── Forms ─────────────────────────────────────────────────── */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -313,6 +249,7 @@ nav a:hover, nav a.active {
 .form-group label {
     margin-bottom: 0.5rem;
     font-weight: bold;
+    color: #333;
 }
 
 .form-group input,
@@ -321,30 +258,154 @@ nav a:hover, nav a.active {
     padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
 }
 
-.calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 1px;
-    background: #ddd;
-    border: 1px solid #ddd;
-    margin: 2rem auto;
-    max-width: 1200px;
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
 }
 
-.calendar-header {
-    background: #0056b3;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    font-weight: bold;
+/* ── Login / Register ──────────────────────────────────────── */
+.login-container,
+.register-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 0 20px;
 }
 
-.calendar-slot {
+.login-box,
+.register-box {
     background: white;
-    padding: 1rem;
-    min-height: 100px;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.login-box h2,
+.register-box h2 {
+    margin-bottom: 0.5rem;
+    color: #007bff;
+}
+
+.login-box p,
+.register-box p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-login,
+.btn-register {
+    width: 100%;
+    padding: 0.8rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.btn-login:hover,
+.btn-register:hover {
+    background: #0056b3;
+}
+
+.erreur {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.succes {
+    background: #d4edda;
+    color: #155724;
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.lien-register,
+.lien-login {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.lien-register a,
+.lien-login a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.password-hint {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 0.3rem;
+}
+
+/* ── Contact ───────────────────────────────────────────────── */
+.animated-banner {
+    background: linear-gradient(45deg, #0056b3, #003d82);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.banner-content {
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: nowrap;
+    animation: fadeIn 4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.image-gallery {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.gallery-container {
+    position: relative;
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+.gallery-container img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .contact-layout {
@@ -364,14 +425,6 @@ nav a:hover, nav a.active {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-}
-
-/* Section de navigation rapide */
 .quick-nav-section {
     max-width: 1200px;
     margin: 2rem auto;
@@ -406,8 +459,6 @@ footer {
 .quick-nav-link:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    text-decoration: none;
-    color: #333;
 }
 
 .nav-icon {
@@ -427,79 +478,30 @@ footer {
     margin: 0;
 }
 
+/* ── Responsive ────────────────────────────────────────────── */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
         gap: 1rem;
     }
-    
+
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
     }
-    
-    .hero h2 {
-        font-size: 2rem;
-    }
-    
-    .feature-grid,
-    .dashboard-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .tasks-layout,
-    .contact-layout {
-        grid-template-columns: 1fr;
-    }
-    
-    .calendar-grid {
-        font-size: 0.8rem;
-    }
-    
-    .calendar-slot {
-        min-height: 60px;
-    }
-    
-    .quick-nav-links {
-        grid-template-columns: 1fr;
-    }
-    
-    .quick-nav-link {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .nav-icon {
-        margin-right: 0;
-        margin-bottom: 1rem;
-    }
+
+    .hero h2        { font-size: 2rem; }
+    .feature-grid   { grid-template-columns: 1fr; }
+    .dashboard-grid { grid-template-columns: 1fr; }
+    .tasks-layout   { grid-template-columns: 1fr; }
+    .contact-layout { grid-template-columns: 1fr; }
+
+    .quick-nav-links { grid-template-columns: 1fr; }
+    .quick-nav-link  { flex-direction: column; text-align: center; }
+    .nav-icon        { margin-right: 0; margin-bottom: 1rem; }
 }
 
 @media (max-width: 480px) {
-    .hero h2 {
-        font-size: 1.5rem;
-    }
-    
-    .hero p {
-        font-size: 1rem;
-    }
-    
-    .calendar-grid {
-        gap: 0;
-    }
-}
-nav a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: rgb(0, 255, 179); /* effet quand tu passes la souris */
-}
-
-nav a.active {
-  color: rgb(36, 215, 221);       /* couleur de la page active */
-  font-weight: bold;
-  border-bottom: 2px solid rgb(20, 216, 190);
+    .hero h2 { font-size: 1.5rem; }
+    .hero p  { font-size: 1rem; }
 }
